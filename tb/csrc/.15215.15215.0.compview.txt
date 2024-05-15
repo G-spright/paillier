@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1715786879.983268682, "rt":0.51, "ut":0.09, "st":0.09}}
+{"vcselab":{"timestamp_begin":1715786880.531070664, "rt":0.59, "ut":0.10, "st":0.05}}
+{"link":{"timestamp_begin":1715786881.152067347, "rt":0.14, "ut":0.08, "st":0.01}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1715786879.716811418}
+{"VCS_COMP_START_TIME": 1715786879.716811418}
+{"VCS_COMP_END_TIME": 1715786881.378771618}
+{"VCS_USER_OPTIONS": "-full64 -LDFLAGS -Wl,--no-as-needed -sverilog -timescale=1ns/1ps -CFLAGS -DVCS -kdb -debug_acc+all+dmptf -debug_region+cell+encrypt -f /home/yang/Project/paillier/tb/filelist.f -l vcs.log"}
+{"vcs1": {"peak_mem": 15657}}
+{"stitch_vcselab": {"peak_mem": 15716}}

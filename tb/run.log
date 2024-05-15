@@ -1,0 +1,42 @@
+Command: /home/yang/Project/paillier/tb/./simv -ucli -do dump.tcl -l run.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  May 15 23:28 2024
+ucli% fsdbAutoSwitchDumpfile 25 "./wave.fsdb" 100
+*Verdi* Loading libsscore_vcs202206.so
+FSDB Dumper for VCS, Release Verdi_T-2022.06, Linux x86_64/64bit, 05/29/2022
+(C) 1996 - 2022 by Synopsys, Inc.
+*Verdi* FSDB: The switch FSDB file size might not match the input size (25MB) because of performance concerns.
+*Verdi* FSDB: To have the FSDB file size match the input size (25MB), set the FSDB_ENV_PRECISE_AUTOSWITCH environment, though the dumping performance might decrease.
+*Verdi* : Enable automatic switching of the FSDB file.
+*Verdi* : (Filename='./wave', Limit Size=25MB, File Amount=100).
+*Verdi* : Create FSDB file './wave_000.fsdb'
+*Verdi* : Create the file './wave.log' to log the time range of each FSDB file.
+*Verdi* : Create virtual FSDB file './wave.vf' to log each FSDB file.
+ucli% fsdbDumpvars +all
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+ucli% run
+Time:                    0, wr_data: 0000, rd_data: xxxx, full: 0, empty: 1
+Time:                15000, wr_data: 0001, rd_data: xxxx, full: 0, empty: 1
+Time:                25000, wr_data: 0002, rd_data: xxxx, full: 0, empty: 1
+Time:                35000, wr_data: 0003, rd_data: xxxx, full: 0, empty: 0
+Time:                45000, wr_data: 0004, rd_data: xxxx, full: 0, empty: 0
+Time:                55000, wr_data: 0005, rd_data: xxxx, full: 0, empty: 0
+Time:                65000, wr_data: 0006, rd_data: xxxx, full: 0, empty: 0
+Time:                75000, wr_data: 0007, rd_data: xxxx, full: 0, empty: 0
+Time:                85000, wr_data: 0008, rd_data: xxxx, full: 1, empty: 0
+Time:                95000, wr_data: 0008, rd_data: 0001, full: 1, empty: 0
+Time:               105000, wr_data: 0008, rd_data: 0002, full: 1, empty: 0
+Time:               115000, wr_data: 0008, rd_data: 0003, full: 0, empty: 0
+Time:               125000, wr_data: 0008, rd_data: 0004, full: 0, empty: 0
+Time:               135000, wr_data: 0008, rd_data: 0005, full: 0, empty: 0
+Time:               145000, wr_data: 0008, rd_data: 0006, full: 0, empty: 0
+Time:               155000, wr_data: 0008, rd_data: 0007, full: 0, empty: 1
+$finish called from file "/home/yang/Project/paillier/tb/fifo_tb.v", line 67.
+$finish at simulation time               265000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 265000 ps
+CPU Time:      0.160 seconds;       Data structure size:   0.0Mb
+Wed May 15 23:28:03 2024

@@ -1,0 +1,6 @@
+fsdbAutoSwitchDumpfile 25 "./wave.fsdb" 100
+fsdbDumpvars +all
+run
+verdiWindowResize -win $_Verdi_1 "1053" "239" "900" "700"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+debExit
