@@ -1,3 +1,0 @@
-Command Line: /opt/synopsys/verdi/T-2022.06/platform/LINUXAMD64/bin/Novas -i -simflow -simBin ./simv -simDelim -do dump.tcl -l verid.log
-uname(Linux XiaoXinPro 5.15.153.1-microsoft-standard-WSL2 #1 SMP Fri Mar 29 23:14:13 UTC 2024 x86_64)
-au time 359.398605 14.605854 5.454495 delta 183779328 183779328 total 683667456 683667456

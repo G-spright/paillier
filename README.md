@@ -2,7 +2,4 @@
 
 fifo wave
 
-![](./doc/fifo_wave.png)  
-
-
-
+![fifo](./doc/fifo_wave.png)  

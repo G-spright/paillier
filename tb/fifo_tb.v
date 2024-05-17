@@ -23,9 +23,9 @@ module fifo_tb();
     ) uut (
         .clk(clk),
         .rst_n(rst_n),
-        .wr_en(wr_en),
+        .push(wr_en),
         .wr_data(wr_data),
-        .rd_en(rd_en),
+        .pop(rd_en),
         .rd_data(rd_data),
         .full(full),
         .empty(empty)
