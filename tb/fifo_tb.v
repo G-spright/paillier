@@ -8,7 +8,7 @@ module fifo_tb();
 
     // Testbench signals
     reg clk;
-    reg rst_n;
+    reg rst;
     reg wr_en;
     reg [WIDTH-1:0] wr_data;
     reg rd_en;
@@ -22,13 +22,13 @@ module fifo_tb();
         .DEPTH(DEPTH)
     ) uut (
         .clk(clk),
-        .rst_n(rst_n),
-        .push(wr_en),
+        .rst(rst),
+        .wr_en(wr_en),
         .wr_data(wr_data),
-        .pop(rd_en),
+        .rd_en(rd_en),
         .rd_data(rd_data),
-        .full(full),
-        .empty(empty)
+        .nfull(full),
+        .nempty(empty)
     );
 
     // Clock generation
@@ -38,14 +38,14 @@ module fifo_tb();
     initial begin
         // Initialize signals
         clk = 0;
-        rst_n = 0;
+        rst = 1;
         wr_en = 0;
         wr_data = 0;
         rd_en = 0;
 
         // Reset the FIFO
         #10;
-        rst_n = 1;
+        rst = 0;
 
         // Write to the FIFO
         repeat (DEPTH) begin
