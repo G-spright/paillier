@@ -3005,3 +3005,4 @@ module ddr3 (
     always @(posedge dqs_in[63]) if ( dqs_in[63]) dqs_neg_timing_check(63);
 
 endmodule
+

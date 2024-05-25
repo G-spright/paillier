@@ -1,12 +1,35 @@
-#include <stdio.h>
+#include <iostream>
+#include <fstream>
+#include <bitset>
 #include "declaration.h"
 
 using namespace std;
 
 int main()
 {
+    mpz_class n,m;
+    string s;
+    fstream f;
+
+    n=1;
+
+    f.open("primes_table",ios::out);
+    for(int i=1;i<2048;i++)
+    {
+        n=(n<<1);
+        mpz_nextprime(m.get_mpz_t(), n.get_mpz_t());
+        s = m.get_str(2);
+        f << s << endl;
+    }
+    f.close();
+}
+
+
+/*
+int main()
+{
     srand(time(0));
-    keypair keys = generate_paillier_keypair(1024);
+    keypair keys = generate_paillier_keypair(2048);
     cout << keys.pub_key->n << endl;
     cout << (keys.priv_key->p - 1) * (keys.priv_key->q - 1) << endl;
     
@@ -41,3 +64,4 @@ int main()
 
 // Compile command
 // g++ -o output.o -w test.cpp -L. -lgmpfrxx -lmpfr -lgmpxx -lgmp -lm
+*/

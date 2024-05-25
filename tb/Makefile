@@ -8,7 +8,7 @@ SIM_ARGS =  -full64 -LDFLAGS -Wl,--no-as-needed \
     -debug_acc+all+dmptf -debug_region+cell+encrypt \
 	-lca -Mupdate
 
-XIP_ARGS = -f $(XILINX_VIVADO)/data/secureip/secureip_cell.list.f\
+XIP_ARGS = -f secureip_cell.list.f\
 		   -y $(XILINX_VIVADO)/data/verilog/src/unisims \
 		   -y $(XILINX_VIVADO)/data/verilog/src/unimacro \
 		   -y $(XILINX_VIVADO)/data/verilog/src/xeclib \

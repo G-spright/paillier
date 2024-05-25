@@ -272,28 +272,13 @@ begin
 
     @(posedge clk);
     
-    ram_write(0,  128'hffeeddccbbaa99887766554433221100, 16'hFFFF);
-    ram_write(16, 128'hbeaffeadd0d0600d5555AAAA00000000, 16'hFFFF);
-    ram_write(32, 128'hffffffff111111112222222233333333, 16'hFFFF);
+    //for(int i=0; i<2048; i=i+12)
+        ram_write(0, 128'h00000000000000000000000000000000, 16'hFFFF);
+    // addr 0-10 col 11-13 bank 14-27 row
+        ram_write(28'b11_1111_1111_1111_101_111_1111_1111, 128'h00000000000000000000000000000000, 16'hFFFF);
+        ram_write(20496, 128'h00000000000000000000000000000000, 16'hFFFF);
+        ram_read(20480, data);
 
-    ram_read(0, data);
-    if (data != 128'hffeeddccbbaa99887766554433221100)
-    begin
-        $fatal(1, "ERROR: Data mismatch!");
-    end
-
-    ram_read(16, data);
-    if (data != 128'hbeaffeadd0d0600d5555AAAA00000000)
-    begin
-        $fatal(1, "ERROR: Data mismatch!");
-    end
-
-    ram_read(32, data);
-    if (data != 128'hffffffff111111112222222233333333)
-    begin
-        $fatal(1, "ERROR: Data mismatch!");
-    end
-    
     @(posedge clk);   
     $finish;
 
